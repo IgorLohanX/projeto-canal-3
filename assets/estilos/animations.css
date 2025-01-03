@@ -90,7 +90,7 @@
     z-index: 1;
     transform-origin: bottom right;
 
-    animation: animate 8s linear infinite;
+    animation: animateWf 8s linear infinite;
 }
 
 .neon-wf::after {
@@ -106,11 +106,11 @@
     transform-origin: bottom right;
     
 
-    animation: animate 8s linear infinite;
+    animation: animateWf 8s linear infinite;
     animation-delay: -4s;    
 }
 
-@keyframes animate  {
+@keyframes animateWf  {
     0% {
         transform: rotate(0deg);
     }
