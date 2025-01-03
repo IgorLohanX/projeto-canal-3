@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/estilos/style.css">
+    <link rel="stylesheet" href="assets/estilos/responsive.css">
+    <link rel="stylesheet" href="assets/estilos/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav id="sidebar">
+            <ul>
+                <li>
+                    <span><img class="logo" src="assets/images/crown.png" alt="Logo"></span>
+
+                    <button onclick=toggleSidebar() id="toggle-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                    </button>
+                </li>
+                <li class="active">
+                    <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                    <span>Home</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="https://www.youtube.com/@IgorLohan" target="_blank" rel="external">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M616-242q-27 1-51.5 1.5t-43.5.5h-41q-71 0-133-2-53-2-104.5-5.5T168-257q-26-7-45-26t-26-45q-6-23-9.5-56T82-447q-2-36-2-73t2-73q2-30 5.5-63t9.5-56q7-26 26-45t45-26q23-6 74.5-9.5T347-798q62-2 133-2t133 2q53 2 104.5 5.5T792-783q26 7 45 26t26 45q6 23 9.5 56t5.5 63q2 36 2 73v17q-19-8-39-12.5t-41-4.5q-83 0-141.5 58.5T600-320q0 21 4 40.5t12 37.5ZM400-400l208-120-208-120v240Zm360 200v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Z"/></svg>
+                    <span>Canal do Youtube</span>
+                    </a>
+                </li>
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-120H200q-33 0-56.5-23.5T120-200v-280q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480v280q0 33-23.5 56.5T760-120H600v-320h160v-40q0-117-81.5-198.5T480-760q-117 0-198.5 81.5T200-480v40h160v320Zm-80-240h-80v160h80v-160Zm400 0v160h80v-160h-80Zm-400 0h-80 80Zm400 0h80-80Z"/></svg>
+                        <span>Playlists</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLNnyugYGImw8XiEFeyLmWIylrJveyikhX" target="_blank" rel="external">Black Desert</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLNnyugYGImw86e3wvGEWF78DSPg4mqNjm" target="_blank" rel="external">Warframe</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLNnyugYGImw9O2M6_2XhwMvRxlrw-XI1S" target="_blank" rel="external">Magic Campus</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>
+                        <span>Vídeos</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li>
+                                <a href="bdopag.html">Black Desert</a>
+                            </li>
+                            <li>
+                                <a href="wfpag.html">Warframe</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-400q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400ZM320-240h320v-23q0-24-13-44t-36-30q-26-11-53.5-17t-57.5-6q-30 0-57.5 6T369-337q-23 10-36 30t-13 44v23ZM720-80H240q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80Zm0-80v-446L526-800H240v640h480Zm-480 0v-640 640Z"/></svg>
+                        <span>Contatos</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li>
+                                <a href="https://www.instagram.com/igor.lohan/" target="_blank" rel="external">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/IgorLohanX" target="_blank" rel="external">GitHub</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <div>
+                    <button class="btn-mode">
+                            <i class="ri-moon-line btn-theme" id="theme-button">
+                            <!-- <span>Theme</span> -->
+                            </i>
+                    </button>
+                    
+                </div>
+            </ul>
+            
+        </nav>
+    </header>
+    <main class="closemenu">
+
+        <div class="container">
+            <h2 id="h2vid">Vídeos de Warframe</h2>
+        </div>
+        <div class="container bdo">
+            
+            <div class="bdo-content">
+                <span>Música:</span><br>
+                <span>Snoop Dogg - Still D.R.E.</span>
+                <br>
+                <span>Duração: 0:58</span> <br>
+
+                <div class="neon-wf">
+                    <iframe width="449" height="799" src="https://www.youtube.com/embed/Fu07UusgKAA" title="Still D.R.E. (Snoop Dogg, Dr. Dre) - Shawzin Warframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="bdo-content">
+                <span>Música:</span><br>
+                <span>Linkin Park - BURN IT DOWN</span> <br>
+                <span>Duração: 0:50</span> <br>
+                <div class="neon-wf">
+                    <iframe width="457" height="665" src="https://www.youtube.com/embed/eAieweQ78Mg" title="Burn It Down (Linkin Park) - Shawzin Warframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+        <div class="container bdo">
+            <div class="bdo-content">
+                <span>Música:</span><br>
+                <span>Shawn Mendes - Mercy</span> <br>
+                <span>Duração: 0:59</span> <br>
+                <div class="neon-wf">
+                    <iframe width="449" height="799" src="https://www.youtube.com/embed/sZ9XmSWuuCg" title="Mercy (Shawn Mendes) - Shawzin Warframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <div class="bdo-content">
+                <span>Música:</span><br>
+                <span>Imagine Dragons - Radioactive</span> <br>
+                <span>Duração: 0:59</span> <br>
+                <div class="neon-wf">
+                    <iframe width="449" height="799" src="https://www.youtube.com/embed/eVKBLLrjwY4" title="Radioactive v2 (Imagine Dragons) - Shawzin Warframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="container bdo">
+            <div class="bdo-content">
+                <span>Música:</span><br>
+                <span>Aaron Smith - Dancin</span> <br>
+                <span>Duração: 1:00</span> <br>
+                <div class="neon-wf">
+                    <iframe width="500" height="679" src="https://www.youtube.com/embed/GhPefrzxNJw" title="Dancin (Aaron Smith) - Shawzin Warframe #music #warframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <div class="bdo-content">
+                <span>Música:</span><br>
+                <span>The Weeknd - Or Nah</span> <br>
+                <span>Duração: 0:15</span> <br>
+                <div class="neon-wf">
+                    <iframe width="449" height="799" src="https://www.youtube.com/embed/fPOOjDydzDQ" title="Or Nah (The Weeknd) - Shawzin Warframe #theweeknd #music #warframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="container bdo link-wf">
+            <span class="p">Alguns links de outros vídeos abaixo</span>
+            <ul>
+                <li>
+                    <a href="https://youtube.com/shorts/72cKg6lSIp4?si=q1I2yhejypkAnSH4" target="_blank">
+                        <i class="ri-star-s-line"></i>
+                        AC/DC - T.N.T. 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/shorts/n1EUNt7g2EE?si=NCgqp-fSdjGLnq9I" target="_blank">
+                        <i class="ri-star-s-line"></i>
+                        Black Eyed Peas - Where Is The Love 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/shorts/iMbJvuVG3jo?si=bM99Sj-abP5h0axP" target="_blank">
+                        <i class="ri-star-s-line"></i>
+                        David Guetta - Titanium 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/shorts/cUIOxvVGaNo?si=PXuko15yo2fjmqbP" target="_blank">
+                        <i class="ri-star-s-line"></i>
+                        Halsey - Without Me 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/shorts/ugUKdpiwKec?si=ST5iKM47ukyFw8o2" target="_blank">
+                        <i class="ri-star-s-line"></i>
+                        Naruto - Blue Bird 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/shorts/TJb-VLl-a6Q?si=7YAvNANDpW5S_5vC" target="_blank">
+                        <i class="ri-star-s-line"></i>
+                        Post Malone - Goodbyes 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/shorts/vZFEMjlisEI?si=NyZiyuwZbW5hROn3" target="_blank">
+                        <i class="ri-star-s-line"></i>
+                        STARSET - My Demons
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/shorts/peFuwTupFN8?si=uk-oASVLIE26_8Eu" target="_blank">
+                        <i class="ri-star-s-line"></i>
+                        Camila Cabello - Havanna 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/shorts/O51cWX5SgoE" target="_blank">
+<i class="ri-star-s-line"></i>
+                         Post Malone - Sunflower 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/shorts/RcjvuYEAFAk" target="_blank">
+                        <i class="ri-star-s-line"></i> 
+                        Fairy Tail - Anime Main Theme 
+                        <i class="ri-star-s-line"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    <script src="assets/scripts/script.js" defer></script>
+</body>
+</html>

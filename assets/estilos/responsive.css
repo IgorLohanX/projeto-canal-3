@@ -1,0 +1,217 @@
+@media (max-width: 800px) {
+    .darkmode {
+        margin-top: 0;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+    }
+    main{
+        padding: 2em 1em 60px 1em;
+    }
+    .container {
+        border: none;
+        padding: 0;
+    }
+    #sidebar {
+        height: 60px;
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid #42434a;
+        padding: 0;
+        position: fixed;
+        top: unset;
+        bottom: 0;
+
+            > ul {
+                padding: 0;
+                display: grid;
+                grid-auto-columns: 60px;
+                grid-auto-flow: column;
+                justify-content: space-around;
+                align-items: center;
+                overflow-x: scroll;
+            }
+            ul li {
+                height: 100%;
+            }
+            ul a, ul .dropdown-btn {
+                width: 60px;
+                height: 60px;
+                padding: 0;
+                border-radius: 0;
+                justify-content: center;
+            }
+            /* desativando a logo e as svg*/
+            ul li span, ul li:first-child, .dropdown-btn svg:last-child {
+                display: none;
+            }
+            /* fazendo aparecer a lista no modo mobile*/
+            ul li .sub-menu.show {
+                position: fixed;
+                bottom: 60px;
+                left: 0;
+                box-sizing: border-box;
+                height: 60px;
+                width: 100%;
+                background-color: #42434a;
+                border-top: 1px solid black;
+                display: flex;
+                justify-content: center;
+
+                    /* definindo se vai ter rolagem horizontal*/
+                    > div {
+                        overflow-x: auto;
+                    }
+                    /* fazendo aparecer todas as opções */
+                    li {
+                        display: inline-flex;
+                    }
+                    /* ajustando os links  */
+                    a {
+                        box-sizing: border-box;
+                        padding: 1em;
+                        width: auto;
+                        justify-content: center;
+                    }
+            }
+
+    }
+}
+
+@media screen and (min-width: 801px) {
+    #sidebar {
+        height: 99.5dvh;
+        top: 2px;
+        margin-left: 1px;
+        border: 1px solid #42434a;
+        border-radius: 0 1rem 1rem 0;
+    }
+    main {
+        text-align: center;
+    }
+
+    #sidebar ul {
+        row-gap: calc(4dvh - 10px);
+    }
+
+    #sidebar.close {
+        border-radius: 0;
+    }
+    
+/* dark mode */
+.darkmode {
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    font-size: 24px;
+}
+
+.btn-mode{
+    width: 100%;
+    background: none;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.btn-theme {
+    border-radius: .5em;
+    padding: .85em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    
+}
+
+/* Sobre a pag de bdo */
+
+.bdo {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    gap:2rem;
+}
+
+.bdo-content {
+    display: grid;
+    text-align: center;
+    
+}
+
+.bdo-content span {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.bdo .p {
+    font-size: 2rem;
+}
+
+.bdo-content iframe {
+    width: max(400px);
+    height: 700px;
+    overflow: hidden;
+}
+
+.container > #h2vid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 4rem;
+}
+
+.breve span {
+    line-height: 3rem;
+}
+.neon iframe {
+    position: absolute;
+    background-color: none;
+    inset:5px;
+    border-radius: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;   
+}
+
+
+.link-wf {
+    display: grid;
+}
+
+.link-wf span {
+    line-height:2rem;
+}
+.link-wf ul {
+    line-height: 2.1rem;
+}
+.link-wf ul li a {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    
+}
+
+.link-wf ul li a:hover {
+    background-color: #42434a;
+    color: magenta;
+    padding: 5px;
+    border: 1px solid magenta;
+    border-radius: 6px;
+    letter-spacing: 1.43px;
+    transition: .4s linear;
+    i {
+        color: white;
+    }
+}
+
+.link-wf ul li a i {
+
+}
+
+}
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Canal</title>
+    <link rel="stylesheet" href="assets/estilos/style.css">
+    <link rel="stylesheet" href="assets/estilos/responsive.css">
+    <link rel="stylesheet" href="assets/estilos/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav id="sidebar">
+            <ul>
+                <li>
+                    <span><img class="logo" src="assets/images/crown.png" alt="Logo"></span>
+
+                    <button onclick=toggleSidebar() id="toggle-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                    </button>
+                </li>
+                <li class="active">
+                    <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                    <span>Home</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="https://www.youtube.com/@IgorLohan" target="_blank" rel="external">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M616-242q-27 1-51.5 1.5t-43.5.5h-41q-71 0-133-2-53-2-104.5-5.5T168-257q-26-7-45-26t-26-45q-6-23-9.5-56T82-447q-2-36-2-73t2-73q2-30 5.5-63t9.5-56q7-26 26-45t45-26q23-6 74.5-9.5T347-798q62-2 133-2t133 2q53 2 104.5 5.5T792-783q26 7 45 26t26 45q6 23 9.5 56t5.5 63q2 36 2 73v17q-19-8-39-12.5t-41-4.5q-83 0-141.5 58.5T600-320q0 21 4 40.5t12 37.5ZM400-400l208-120-208-120v240Zm360 200v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Z"/></svg>
+                    <span>Canal do Youtube</span>
+                    </a>
+                </li>
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-120H200q-33 0-56.5-23.5T120-200v-280q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480v280q0 33-23.5 56.5T760-120H600v-320h160v-40q0-117-81.5-198.5T480-760q-117 0-198.5 81.5T200-480v40h160v320Zm-80-240h-80v160h80v-160Zm400 0v160h80v-160h-80Zm-400 0h-80 80Zm400 0h80-80Z"/></svg>
+                        <span>Playlists</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLNnyugYGImw8XiEFeyLmWIylrJveyikhX" target="_blank" rel="external">Black Desert</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLNnyugYGImw86e3wvGEWF78DSPg4mqNjm" target="_blank" rel="external">Warframe</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLNnyugYGImw9O2M6_2XhwMvRxlrw-XI1S" target="_blank" rel="external">Magic Campus</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>
+                        <span>Vídeos</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li>
+                                <a href="bdopag.html">Black Desert</a>
+                            </li>
+                            <li>
+                                <a href="wfpag.html">Warframe</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-400q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400ZM320-240h320v-23q0-24-13-44t-36-30q-26-11-53.5-17t-57.5-6q-30 0-57.5 6T369-337q-23 10-36 30t-13 44v23ZM720-80H240q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80Zm0-80v-446L526-800H240v640h480Zm-480 0v-640 640Z"/></svg>
+                        <span>Contatos</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li>
+                                <a href="https://www.instagram.com/igor.lohan/" target="_blank" rel="external">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/IgorLohanX" target="_blank" rel="external">GitHub</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <div>
+                    <button class="btn-mode">
+                            <i class="ri-moon-line btn-theme" id="theme-button">
+                            <!-- <span>Theme</span> -->
+                            </i>
+                    </button>
+                    
+                </div>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <main class="closemenu">
+        <div class="container">
+            <h1>Projeto do Canal</h1>
+                <p class="texto">Na <strong>v.3</strong> do projeto, agora com <strong>Flex</strong> e algumas interações com <strong>JS</strong>, o foco foi totalmente no <strong>visual</strong> (com Light Mode e Dark Mode), na <strong>responsividade</strong> via Flex, <strong>organização</strong> com Grid e possibilitar <strong>interações</strong> pelo menu via JS.<br><br>
+                
+                Posteriormente, haverá alguns ajustes nessa versão, mas o projeto final vai ser na v.4 com Frameworks, Ajax e outras tecnologias para deixar o site funcional o máximo possível no quesito client-side.</p>
+        </div>
+        <div class="container">
+            <h2>Contéudo do Canal</h2>
+                
+                <h3>Black desert</h3>
+                
+                <div class="img-container">                    
+                    <img class="img" src="assets/images/bdo.jpg" alt="Imagem do Black Desert">
+                </div>
+                
+                <p class="texto">
+                    
+                    Black Desert é um RPG on-line que acontece em um mundo de fantasia. No início, o jogador escolhe uma classe para jogar, sendo um total de 29 classes.<br><br>
+                
+                    Além das quests, existe um sistema de moradia, guildas, um sistema de combate ativo e a possibilidade de cultivar, comercializar, criar, pescar e domar cavalos, o chamado lifetask. Outros recursos especiais incluem uma. um sistema climático, mudanças diurnas e noturnas e um modo parkour para escalar e explorar a área circundante.<br><br>
+                    
+                    Por fim, também há possibilidade de tocar instrumentos dentro do jogo, podendo baixar as músicas feitas por outros usuários ou simplesmente compor sua própria música e colocar para tocar. E esse é o tipo de conteúdo do projeto, sendo complicado de trabalhar no layout do site por conta do uso de muitos iframes no formato de Shorts.
+
+                </p>
+        </div>
+        <div class="container">
+            <h3>Warframe</h3>
+                
+                <div class="img-container">
+                    <img class="img" src="assets/images/warframe.png" alt="Imagem do Warframe">
+                </div>
+                
+                <p class="texto">
+                    
+                    Warframe é um jogo de tiro em terceira pessoa, cooperativo de ficção científica de 2013, desenvolvido e publicado pela Digital Extremes para Microsoft Windows, Xbox One (para membros Xbox Live Gold), PlayStation 4 (para usuários de membros grátis e mais) e já estava disponível no GamersFirst Live.<br><br>
+                    
+                    Warframe está ambientado num futuro distante onde o sistema solar é dominado entre o Grineer, uma raça do império de clones militarizados; o Corpus, um culto mercante de mega corporação com tecnologia robótica avançada e laser; e o infestado, o nome de uma doença e suas vítimas que devora tudo. Os jogadores assumem o papel de um Tenno, um guerreiro antigo criado pelo Orokin para combater um inimigo misterioso, mas deixado para dormir há gerações, até que uma entidade chamada Lotus é a única disposta em reunir as colônias dispersas e destruídas pela guerra ao longo do sistema.<br><br>
+                        
+                    O jogo também possui instrumentos para tocar, porém, são inferiores comparado aos do Black Desert Online. E esse também é um dos conteúdos do projeto, sendo complicado de trabalhar no layout do site pelo mesmo motivo.
+
+                </p>
+        </div>
+        <div class="container">
+            <footer>
+                <p>Projeto criado por<a href="https://github.com/IgorLohanX" target="_blank" rel="external">Igor Lohan</a></p>
+            </footer>
+        </div>
+    </main>
+    
+
+
+
+
+
+
+
+
+    <script src="assets/scripts/script.js" defer></script>
+</body>
+</html>
