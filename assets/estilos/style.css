@@ -5,27 +5,53 @@
     margin: 0;
 }
 
+/* Paleta do light-mode e dark-mode
+#fafafa
+#e4e5f1
+#d2d3db
+#9394a5
+#484b6a
+--------------------------
+#ffffff
+#1c1c1c
+#ff008d
+#8900ff
+#001eff
+*/
 :root {
-    --cor-primaria: ;
-    --cor-titulo:;
-    --cor-texto: #000;
-    --body-color:#e6e6ef;
-    --bg-color: #FFFFFF;
-    --shadow-color:;
-    --border-color: #42434a;
-
-
+    --body-color:#e4e5f1;
+    --bg-color: #fafafa;
+    --border-color: #9394a5;
+    --shadow-color: #484b6a;
+    
+    --cor-texto: #1c1c1c;
+    --cor-titulo: #000000;
+    
+    
+    --hover-color: #fafafa;
+    --hover-bg: #1c1c1c
 }
 
 /*=============== VARIABLES DARK THEME ===============*/
-/* body.dark-theme {
-    --cor-primaria: hsl(228, 70%, 63%);
-    --cor-titulo: hsl(228, 18%, 96%);
-    --cor-texto: hsl(228, 12%, 61%);
-    --body-color: hsl(228, 24%, 16%);
-    --shadow-color: hsla(228, 80%, 4%, .3);
-    --border-color: ;
-} */
+body.dark-theme {
+    --body-color: #262d3f;
+    --bg-color: #1c1c1c;
+    --border-color: #ffffff;
+    --shadow-color: #ff008d;
+    
+    --cor-texto: #ffffff;
+    --cor-titulo: #ffffff;
+    
+    --hover-color: #1c1c1c;
+    --hover-bg: #fafafa;
+
+    .btn-mode {
+        background-color: #ffffff;
+    }
+    .btn-mode i {
+        color: #1c1c1c;
+    }
+}
 
 
 html {
@@ -76,6 +102,9 @@ body {
 #sidebar.close {
     padding: 5px;
     width: 60px;
+    .btn-mode {
+        border: none;
+    }
 }
 
 #sidebar ul {
@@ -103,7 +132,7 @@ body {
 }
 
 #sidebar ul li.active a:hover {
-    color: var(--bg-color);
+    color: var(--hover-color);
 
 }
 
@@ -138,11 +167,13 @@ body {
 #sidebar a:hover,
 #sidebar .dropdown-btn:hover,
 #toggle-btn:hover {
-    background-color: var(--border-color);
-    color: var(--bg-color);
+    background-color: var(--hover-bg);
+    color: var(--hover-color);
+    transition: color background-color .4s ease;
     svg {
-        fill: var(--bg-color);
+        fill: var(--hover-color);
     }
+    
     
 }
 
@@ -193,7 +224,7 @@ body {
 }
 
 #toggle-btn:hover {
-    background-color: var(--border-color);
+    background-color: var(--hover-bg);
 }
 
 main {
@@ -204,14 +235,22 @@ main {
 main h1 {
     font-size: 3rem;
     padding: 5px;
+    background: -webkit-linear-gradient(#001eff,#8900ff, #ff008d);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 
 main h2, h3 {
     font-size: 3rem;
+    background: -webkit-linear-gradient(#001eff,#8900ff, #ff008d);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 main h3 {
     margin-top: 1.5em;
+    padding: 10px;
 }
 main .texto {
     font-size: 1.3rem;
@@ -238,7 +277,7 @@ main .texto {
     margin-bottom: 20px;
     padding: min(3em, 15%);
 
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px 0px var(--shadow-color);
 }
 
 /* dark mode */
@@ -263,8 +302,8 @@ main .texto {
 }
 
 .btn-mode:hover {
-    background-color: var(--border-color);
-    i {color: var(--bg-color);}
+    background-color: var(--hover-bg);
+    i {color: var(--hover-color);}
 }
 
 .btn-theme {
@@ -296,7 +335,7 @@ footer p > a:hover {
     color: magenta;
     letter-spacing: .2em;
     transition:.5s ease-in;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
     padding: 4px;
     border-radius: 8px;
     background-color: var(--cor-texto);
