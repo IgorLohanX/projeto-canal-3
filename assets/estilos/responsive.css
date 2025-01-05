@@ -79,7 +79,8 @@ body.dark-theme {
             >div {
                 overflow-x: auto;
                 display: flex;
-                justify-content: space-around;
+                justify-content: left;
+                margin-left: 10px;
             }
 
             /* fazendo aparecer todas as opções */
@@ -94,6 +95,7 @@ body.dark-theme {
                 width: auto;                
                 border: 1px solid var(--border-color);
                 border-radius: 1rem;
+                margin-left: 10px;
             }
             a:hover {                
                 border: 1px solid var(--border-color)
