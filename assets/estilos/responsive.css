@@ -147,6 +147,10 @@ body.dark-theme {
         margin-bottom: 40px;
         height: 15px;
     }
+    .footer p {
+        text-align: center;
+    }
+    
 
     footer p>a:hover {
         color: inherit;
